@@ -1,0 +1,109 @@
+@font-face {
+    font-family: 'space-grotesk';
+    src: url('/google-font/space-grotesk.ttf') format('truetype');
+}
+body {
+    background: var(--theme);
+    font-family: 'space-grotesk';
+    margin: 0px;
+    -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden;
+}
+.page-layout {
+    height: calc(100vh - 66px);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+aside .title,
+aside .sidebar-link {
+    display: block!important;
+    white-space: nowrap!important;
+    overflow: hidden!important;
+    text-overflow: clip!important;
+}
+aside .sidebar-link.active button {
+    background: var(--main);
+    border-left: 2px solid white;
+}
+aside .accordion .link {
+    height: 40px;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+aside .accordion .link::before {
+    left: 0; 
+    top: 19px;
+    width: 15px;
+    content: ' ';
+    position: absolute;
+    display: inline-block;
+    border: 1px solid #3b464880;
+}
+aside .accordion .link.active ::before {
+    left: 0; 
+    top: 19px;
+    width: 15px;
+    content: ' ';
+    position: absolute;
+    display: inline-block;
+    border: 1px solid white;
+}
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+.ck.ck-reset.ck-editor {
+    width: 100%;
+}
+.ck.ck-content.ck-editor__editable {
+    height: 100px;
+    max-height: 200px;
+    overflow-y: auto;
+    font-size: 14px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.ck.ck-content.ck-editor__editable::-webkit-scrollbar {
+    width: 2px;
+}
+.ck.ck-balloon-panel.ck-powered-by-balloon {
+    display: none!important;
+    border-color: transparent!important;
+}
+.ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline.ck-focused {
+    border: 1px solid var(--main);
+}
+.ck.ck-toolbar__items {
+    justify-content: center;
+}
+.ck.ck-toolbar button.ck-on {
+    background: var(--main);
+    color: white;
+}
+.ck.ck-toolbar button:hover {
+    background: var(--main)!important;
+    color: white!important;
+    cursor: pointer;
+}
+input[id^='otp-input-'] {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    font-size: 20px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+input[id^='otp-input-']:focus {
+    outline: 1px solid var(--main);  
+}
+@media screen and (max-width: 550px) {
+    .ck.ck-reset.ck-editor {
+        width: 99.5%;
+    }
+}

@@ -1,0 +1,23 @@
+:root {
+    --theme: #f1f3f6;
+    --main: #009688;
+}
+.hello {
+    background: transparent;
+}
+.text-main {
+    color: var(--main);
+}
+a {
+    text-decoration: none;
+}
+::selection {
+    background: var(--main);
+    color: white;
+}
+::-webkit-scrollbar {
+    width: 0px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--main);
+}
